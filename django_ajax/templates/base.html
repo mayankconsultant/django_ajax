@@ -1,0 +1,28 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% include 'partials/headers_css.html' %}
+
+    <title>DATA</title>
+
+</head>
+    <body>
+        {% include 'partials/navbar.html' %}
+        {% include 'partials/offcanvas.html' %}
+
+        <section  class=" main pt-2   bg-700  ">
+            <div class="container-fluid min-vh-100 d-flex flex-column">
+                
+                {% block content %}
+                {% endblock content %}
+
+            </div>
+        </section>
+        
+        <script src="{% static 'base.js' %}"></script>
+    </body>
